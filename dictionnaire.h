@@ -1,4 +1,4 @@
-/*
+/*独立的字典
  le dictionnaire
 */
 char *dictionnaire[77] = {

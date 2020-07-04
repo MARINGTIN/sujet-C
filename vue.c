@@ -31,7 +31,8 @@ void init_display( int argc, char *argv[], void *d){
   ZoneSaisie5 = MakeLabel("Mot joueur 2 :");
   ZoneSaisie6 = MakeStringEntry( NULL, TAULLEZONESAISIE1, NULL, NULL);
   
-  /*
+  /* 下面的函数是用于调用RGB色彩，并给各个组件设定色彩
+   * 色彩分为前景色（如文本内容）和背景色，由两个函数分别设定
    * Here, the fonctions are written for make the rgb color
    * & set the background color of the buttons and the lable
    * & set the frontground color(such as the text) of the buttons and the lable.
@@ -55,9 +56,10 @@ void init_display( int argc, char *argv[], void *d){
   SetBgColor( ZoneSaisie5, color_3);
   SetBgColor( ZoneSaisie6, color_4);
   SetFgColor( ZoneSaisie6, color_3);
-  /*
-   *Use this function to determine the relative position of the components
-   *To determine the overall layout of the interface
+  /* 设定各个组件的相对位置以确定最终结果，
+   * tips：在libsX库中有设定绝对位置的函数，但是试了几次没用明白故不再使用
+   * Use this function to determine the relative position of the components
+   * To determine the overall layout of the interface
    */
   SetWidgetPos( ZoneSaisie0, PLACE_RIGHT, BConsonne,   PLACE_RIGHT, BVoyelle);
   SetWidgetPos( BVoyelle,    PLACE_UNDER, BConsonne,   NO_CARE,     NULL);

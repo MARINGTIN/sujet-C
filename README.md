@@ -1,5 +1,5 @@
 # sujet-C
-使用GitHub进行多个平台同步代码
+本程序使用GitHub方便进行多个平台同步代码
 
 ### 本文档仅是GitHub自动生成的READEME文件
 

@@ -12,6 +12,7 @@
 int main(int argc, char *argv[]) {
   srand ((unsigned int)time(NULL));
   //make sure that initialize the random seed at the current computer time
+  //确保用电脑当前时间初始化随机种子
   str d;
    d.count=0;
    d.best_len=0;//to storage the longest word
@@ -26,16 +27,20 @@ int main(int argc, char *argv[]) {
    d.lettres[6]=' ';
    d.lettres[7]=' ';
    d.lettres[8]=' ';
-   /* to make the lable empty and without some strang words(terrible) */
+   /* to make the lable empty and without some strang words(terrible) 
+    * 防止输出字母的地方出现糟糕的乱码
+    */
    d.lettres[9]=' ';
    d.lettres[10]=' ';
    d.lettres[11]=' ';
+
   /* to make the window, it's necessary */
   argc = OpenDisplay(argc, argv);
   if(argc == 0){
     fprintf(stderr,"Can’t open display\n");
     return EXIT_FAILURE;
   }  
+  
   init_display(argc, argv, &d);
   MainLoop();
   return EXIT_SUCCESS;

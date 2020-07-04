@@ -1,12 +1,12 @@
 #pragma once
 #include <libsx.h>
 
+/* 实现所有功能的结构体 */
 typedef struct{
   char lettres[9];
   int count;
   char *motj1;
   char *motj2;
-  char best_answer[25];
   int best_len;
   int best_count;
 }str;
